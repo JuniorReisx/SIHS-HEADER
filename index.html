@@ -96,6 +96,7 @@
     cursor: pointer;
     transition: background 0.15s ease, color 0.15s ease;
     white-space: nowrap;
+    text-decoration: none;
   }
 
   .nav-btn:hover {
@@ -137,37 +138,41 @@
     </div>
 
     <nav id="nav-menu">
-      <button class="nav-btn active" data-id="infraestrutura">
+      <a class="nav-btn active" data-id="infraestrutura"
+         href="https://portaldaagua.sihs.ba.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=fd98a8f0f8e24104b971bf47dbd2930d&page=Infraestrutura-H%C3%ADdrica">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
         </svg>
         Infraestrutura
-      </button>
+      </a>
 
-      <button class="nav-btn" data-id="abastecimento">
+      <a class="nav-btn" data-id="abastecimento"
+         href="https://portaldaagua.sihs.ba.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=fd98a8f0f8e24104b971bf47dbd2930d&page=Abastecimento-de-%C3%81gua">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
         </svg>
         Abastecimento
-      </button>
+      </a>
 
-      <button class="nav-btn" data-id="esgotamento">
+      <a class="nav-btn" data-id="esgotamento"
+         href="https://portaldaagua.sihs.ba.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=fd98a8f0f8e24104b971bf47dbd2930d&page=Esgotamento-Sanit%C3%A1rio">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2"/>
         </svg>
         Esgotamento
-      </button>
+      </a>
 
-      <button class="nav-btn" data-id="atlas">
+      <a class="nav-btn" data-id="atlas"
+         href="https://portaldaagua.sihs.ba.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=fd98a8f0f8e24104b971bf47dbd2930d&page=Atlas-">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
         Atlas
-      </button>
+      </a>
     </nav>
   </div>
 </header>
-<main></main>
+
 <script>
   const buttons = document.querySelectorAll('.nav-btn');
 
