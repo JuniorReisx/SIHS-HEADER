@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header - Saneamento</title>
+<style>
+  :root {
+    --bg-header: #0f172a;
+    --bg-nav: rgba(30, 41, 59, 0.6);
+    --accent: #22d3ee;
+    --text-main: #f1f5f9;
+    --text-muted: #cbd5e1;
+    --hover-bg: rgba(51, 65, 85, 0.6);
+    --border-color: #334155;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8fafc;
+  }
+
+  header {
+    width: 100%;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .header-container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-header);
+  }
+
+  .logo-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .logo-text {
+    color: var(--text-main);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--bg-nav);
+    border-radius: 10px;
+    padding: 4px;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .nav-btn:hover {
+    color: #ffffff;
+    background: var(--hover-bg);
+  }
+
+  .nav-btn.active {
+    color: var(--bg-header);
+    background: var(--accent);
+  }
+
+  .nav-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      width: 100%;
+      justify-content: flex-start;
+      overflow-x: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+      </div>
+      <span class="logo-text">SANEAMENTO</span>
+    </div>
+
+    <nav id="nav-menu">
+      <button class="nav-btn active" data-id="infraestrutura">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
+        </svg>
+        Infraestrutura
+      </button>
+
+      <button class="nav-btn" data-id="abastecimento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+        Abastecimento
+      </button>
+
+      <button class="nav-btn" data-id="esgotamento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.4 0 2.5-1.8 4.5-2"/>
+        </svg>
+        Esgotamento
+      </button>
+
+      <button class="nav-btn" data-id="atlas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        Atlas
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const buttons = document.querySelectorAll('.nav-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const section = btn.getAttribute('data-id');
+      console.log('Seção selecionada:', section);
+
+      // Dispara um evento customizado que outras partes da página podem escutar
+      document.dispatchEvent(new CustomEvent('nav-change', { detail: { section } }));
+    });
+  });
+</script>
+
+</body>
+</html>
